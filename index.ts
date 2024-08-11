@@ -14,11 +14,11 @@ async function main(){
 
     //----- Get all users -----
     // const users  = await prisma.user.findMany()
-    const users = await prisma.user.findMany({
-        include:{
-            articles:true,
-        }
-    });
+    // const users = await prisma.user.findMany({
+    //     include:{
+    //         articles:true,
+    //     }
+    // });
     // console.log(users)
 
     //----- Crete article and associate it with the user -----
@@ -38,8 +38,8 @@ async function main(){
 
 
     //----- get all articles -----
-    //    const articles = await prisma.article.findMany()
-    //    console.log(articles)
+       const articles = await prisma.article.findMany()
+       console.log(articles)
 
 
     // Crete users and article and associate them
@@ -70,16 +70,25 @@ async function main(){
 
     // ----- Update data -----
  
-    const user = await prisma.user.update({
-        where:{
-            id:1
-        },
-        data:{
-            name : 'rahul sehrawat'
-        }
-    })
+    // const user = await prisma.user.update({
+    //     where:{
+    //         id:1
+    //     },
+    //     data:{
+    //         name : 'rahul sehrawat'
+    //     }
+    // })
 
-    console.log(user)
+    // console.log(user)
+
+    //----- Remove data -----
+    // const article = await prisma.article.delete({
+    //     where:{
+    //         id:2
+    //     },
+    // });
+
+    console.log(articles)
 
 }
 
