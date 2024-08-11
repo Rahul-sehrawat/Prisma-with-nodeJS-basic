@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import { create } from "domain";
 
 const prisma = new PrismaClient();
 
@@ -33,7 +32,7 @@ async function main(){
     //         }
     //     }
     // })
-    
+
     // console.log(article)
 
 
@@ -42,7 +41,7 @@ async function main(){
        console.log(articles)
 
 
-    // Crete users and article and associate them
+    //----- Crete users and article and associate them -----
     // const user  = await prisma.user.create({
     //     data:{
     //         name: 'rue',
@@ -58,7 +57,7 @@ async function main(){
 
     // console.log(user);
 
-    // Loop over users(rahul,rue) articles
+    // ----- Loop over users(rahul,rue) articles -----
     // users.forEach((user)=>{
     //     console.log(`user :${user.name}, email : ${user.email}`)
     //     console.log("articles:");
@@ -69,7 +68,6 @@ async function main(){
     // })
 
     // ----- Update data -----
- 
     // const user = await prisma.user.update({
     //     where:{
     //         id:1
@@ -88,7 +86,7 @@ async function main(){
     //     },
     // });
 
-    console.log(articles)
+ 
 
 }
 
