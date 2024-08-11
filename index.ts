@@ -59,17 +59,27 @@ async function main(){
     // console.log(user);
 
     // Loop over users(rahul,rue) articles
-    users.forEach((user)=>{
-        console.log(`user :${user.name}, email : ${user.email}`)
-        console.log("articles:");
-        user.articles.forEach((article)=>{
-            console.log(`-Title: ${article.title}, Body:${article.body}`)
-        })
-        console.log('\n');
-    })
+    // users.forEach((user)=>{
+    //     console.log(`user :${user.name}, email : ${user.email}`)
+    //     console.log("articles:");
+    //     user.articles.forEach((article)=>{
+    //         console.log(`-Title: ${article.title}, Body:${article.body}`)
+    //     })
+    //     console.log('\n');
+    // })
+
+    // ----- Update data -----
  
+    const user = await prisma.user.update({
+        where:{
+            id:1
+        },
+        data:{
+            name : 'rahul sehrawat'
+        }
+    })
 
-
+    console.log(user)
 
 }
 
